@@ -79,7 +79,7 @@ a {
 
 .home-info h2 {
     display: inline-block;
-    font-size: 35px;
+    font-size: 32px;
     margin-top: -10px;
 }
 
@@ -88,13 +88,23 @@ a {
     display: inline-block;
     color: transparent;
     -webkit-text-stroke: 0.7px #7cf03d;
-    animation: display-text 9s linear infinite;
-    animation-delay: calc(-3s * var(--i));
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
 }
 
-@keyframes display-text {/*display text*/
+@keyframes display-text {
+    25%,
+    100% {
+        display: none;
+    }
+}
 
-    33.33%,
+.home-info h2 a {
+    animation: display-article 16s linear infinite;
+}
+
+@keyframes display-article {
+    75%,
     100% {
         display: none;
     }
@@ -108,7 +118,7 @@ a {
     color: #7cf03d;
     white-space: nowrap;
     overflow: hidden;
-    animation: fill-text 3s linear infinite;
+    animation: fill-text 4s linear infinite;
 }
 
 @keyframes fill-text {
@@ -126,6 +136,7 @@ a {
 .home-info p {
     font-size: 16px;
     margin: 10px 0 25px;
+    text-align: justify;
 }
 
 .home-info .btn-sci {
